@@ -1,0 +1,27 @@
+<div class="govuk-!-width-one-half">
+<select id="person-picker" name="name">
+  <option value="person" selected></option>
+  <option value="person">Joe Bloggs (Presenting Officer, Manchester POU)</option>
+  <option value="person">Jane Smith (Senior Presenting Officer)</option>
+  <option value="person">John Smith (Presenting Officer, Leeds POU)</option>
+  <option value="person">Joe Doe (Chief Caseworking Team)</option>
+  <option value="person">Firstname Lastname (Presenting Officer, Central London POU)</option>
+  <option value="person">Firstname Lastname (Presenting Officer, Newcastle POU)</option>
+  <option value="person">Firstname Lastname (Presenting Officer, Central London POU)</option>
+  <option value="person">Firstname Lastname (Presenting Officer, Central London POU)</option>
+</select>
+</div>
+
+<script src="https://unpkg.com/accessible-autocomplete/dist/accessible-autocomplete.min.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/accessible-autocomplete/dist/accessible-autocomplete.min.css">
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var el = document.querySelector('#person-picker')
+    if (el) {
+      accessibleAutocomplete.enhanceSelectElement({
+        selectElement: el
+      })
+    }
+  })
+</script>
