@@ -1,0 +1,469 @@
+
+{% extends "layouts/main-header-nav" %}
+
+{% block content %}
+
+
+  <div class="allocate-row">
+    <div>
+      <span class="govuk-caption-xl">Birmingham</span>
+      <h1 class="govuk-heading-xl">Allocate</h1>
+    </div>
+    <div class="allocate-controls">
+      <div class="moj-datepicker" data-module="moj-date-picker">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="date">
+            Date
+          </label>
+          <input class="govuk-input moj-js-datepicker-input " id="date" name="date" type="text" value="30/11/2026" aria-describedby="date-hint" autocomplete="off">
+        </div>
+      </div>
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="sort">
+          Court
+        </label>
+        <select class="govuk-select" id="sort" name="sort">
+          <option value="published">Court 1</option>
+          <option value="updated" selected>Court 2</option>
+          <option value="views">Court 3</option>
+          <option value="comments">Court 4</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-quarter">
+    <div class="govuk-tabs" data-module="govuk-tabs">
+      <ul class="govuk-tabs__list">
+        <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+          <a class="govuk-tabs__tab" href="#hearings">
+            Hearings
+          </a>
+        </li>
+        <li class="govuk-tabs__list-item">
+          <a class="govuk-tabs__tab" href="#available-pos">
+            Available POs
+          </a>
+        </li>
+      </ul>
+
+      <!-- hearings tab -->
+      <div class="govuk-tabs__panel allocate-grid-tabs" id="hearings">
+
+        <div class="hearing-card">
+          <div class="hearing-card-header">
+            <p class="govuk-body card__heading govuk-body-s"><a class="govuk-link card__link govuk-link--no-visited-state" href="#"><strong>PA/00023/2022</strong></a></p>
+            <p class="govuk-body-s">Substantive</p>
+          </div>
+          <div class="hearing-card-body">
+            <p class="govuk-body card__description govuk-body-s">Firstname Lastname</p>
+            <p><strong class="govuk-tag tag-small govuk-tag--red">2 alerts</strong></p>
+          </div>
+          <div class="hearing-card-bottom">
+            <p class="govuk-body card__description 	govuk-body-s">Nationality</p>
+            <p><strong class="govuk-tag tag-small govuk-tag--grey">Hybrid</strong></p>
+          </div>
+        </div>
+
+        <div class="hearing-card">
+          <div class="hearing-card-header">
+            <p class="govuk-body card__heading govuk-body-s"><a class="govuk-link card__link govuk-link--no-visited-state" href="#"><strong>PA/22018/2024</strong></a></p>
+            <p class="govuk-body-s">CMR</p>
+          </div>
+          <div class="hearing-card-body">
+            <p class="govuk-body card__description govuk-body-s">Firstname Lastname</p>
+            <!--<p><strong class="govuk-tag tag-small govuk-tag--red">2 alerts</strong></p>-->
+          </div>
+          <div class="hearing-card-bottom">
+            <p class="govuk-body card__description 	govuk-body-s">Nationality</p>
+            <p><strong class="govuk-tag tag-small govuk-tag--grey">Paper</strong></p>
+          </div>
+        </div>
+
+        <div class="hearing-card">
+          <div class="hearing-card-header">
+            <p class="govuk-body card__heading govuk-body-s"><a class="govuk-link card__link govuk-link--no-visited-state" href="#"><strong>PA/39102/2023</strong></a></p>
+            <p class="govuk-body-s">Other</p>
+          </div>
+          <div class="hearing-card-body">
+            <p class="govuk-body card__description govuk-body-s">Firstname Lastname</p>
+            <p><strong class="govuk-tag tag-small govuk-tag--red">2 alerts</strong></p>
+          </div>
+          <div class="hearing-card-bottom">
+            <p class="govuk-body card__description	govuk-body-s">Nationality</p>
+            <p><strong class="govuk-tag tag-small govuk-tag--grey">In person</strong></p>
+          </div>
+        </div>
+
+        <div class="hearing-card">
+          <div class="hearing-card-header">
+            <p class="govuk-body card__heading govuk-body-s"><a class="govuk-link card__link govuk-link--no-visited-state" href="#"><strong>PA/27481/2025</strong></a></p>
+            <p class="govuk-body-s">Substantive</p>
+          </div>
+          <div class="hearing-card-body">
+            <p class="govuk-body card__description govuk-body-s">Firstname Lastname</p>
+            <p><strong class="govuk-tag tag-small govuk-tag--red">1 alert</strong></p>
+          </div>
+          <div class="hearing-card-bottom">
+            <p class="govuk-body card__description 	govuk-body-s">Nationality</p>
+            <p><strong class="govuk-tag tag-small govuk-tag--grey">Remote CVP</strong></p>
+          </div>
+        </div>
+
+        <div class="hearing-card">
+          <div class="hearing-card-header">
+            <p class="govuk-body card__heading govuk-body-s"><a class="govuk-link card__link govuk-link--no-visited-state" href="#"><strong>PA/10023/2026</strong></a></p>
+            <p class="govuk-body-s">Preliminary</p>
+          </div>
+          <div class="hearing-card-body">
+            <p class="govuk-body card__description govuk-body-s">Firstname Lastname</p>
+            <p><strong class="govuk-tag tag-small govuk-tag--red">3 alerts</strong></p>
+          </div>
+          <div class="hearing-card-bottom">
+            <p class="govuk-body card__description 	govuk-body-s">Nationality</p>
+            <p><strong class="govuk-tag tag-small govuk-tag--grey">Hybrid</strong></p>
+          </div>
+        </div>
+
+        <div class="hearing-card">
+          <div class="hearing-card-header">
+            <p class="govuk-body card__heading govuk-body-s"><a class="govuk-link card__link govuk-link--no-visited-state" href="#"><strong>PA/53001/2026</strong></a></p>
+            <p class="govuk-body-s">CMR</p>
+          </div>
+          <div class="hearing-card-body">
+            <p class="govuk-body card__description govuk-body-s">Firstname Lastname</p>
+            <!--<p><strong class="govuk-tag tag-small govuk-tag--red">2 alerts</strong></p>-->
+          </div>
+          <div class="hearing-card-bottom">
+            <p class="govuk-body card__description 	govuk-body-s">Nationality</p>
+            <p><strong class="govuk-tag tag-small govuk-tag--grey">Remote CVP</strong></p>
+          </div>
+        </div>
+
+        <div class="hearing-card">
+          <div class="hearing-card-header">
+            <p class="govuk-body card__heading govuk-body-s"><a class="govuk-link card__link govuk-link--no-visited-state" href="#"><strong>PA/11192/2025</strong></a></p>
+            <p class="govuk-body-s">Substantive</p>
+          </div>
+          <div class="hearing-card-body">
+            <p class="govuk-body card__description govuk-body-s">Firstname Lastname</p>
+            <p><strong class="govuk-tag tag-small govuk-tag--red">2 alerts</strong></p>
+          </div>
+          <div class="hearing-card-bottom">
+            <p class="govuk-body card__description 	govuk-body-s">Nationality</p>
+            <p><strong class="govuk-tag tag-small govuk-tag--grey">In person</strong></p>
+          </div>
+        </div>
+
+        <div class="hearing-card">
+          <div class="hearing-card-header">
+            <p class="govuk-body card__heading govuk-body-s"><a class="govuk-link card__link govuk-link--no-visited-state" href="#"><strong>PA/12348/2022</strong></a></p>
+            <p class="govuk-body-s">CMR</p>
+          </div>
+          <div class="hearing-card-body">
+            <p class="govuk-body card__description govuk-body-s">Firstname Lastname</p>
+            <!--<p><strong class="govuk-tag tag-small govuk-tag--red">2 alerts</strong></p>-->
+          </div>
+          <div class="hearing-card-bottom">
+            <p class="govuk-body card__description 	govuk-body-s">Nationality</p>
+            <p><strong class="govuk-tag tag-small govuk-tag--grey">In person</strong></p>
+          </div>
+        </div>
+      </div>
+
+      <!--available POs tab-->
+      <div class="govuk-tabs__panel allocate-grid-tabs govuk-tabs__panel--hidden" id="available-pos">
+         <p class="govuk-body">
+          <a href="#" class="govuk-link govuk-link--no-visited-state govuk-!-margin-bottom-0">Filters</a>
+        </p>
+        <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-3">
+
+        <div class="po-card">
+          <p class="govuk-body-s govuk-!-margin-bottom-0"><strong>Firstname Lastname</strong></p>
+          <a href="#" class="govuk-body-s govuk-link govuk-link--no-visited-state govuk-!-margin-bottom-0"> View</a>
+        </div>
+
+        <div class="po-card">
+          <p class="govuk-body-s govuk-!-margin-bottom-0"><strong>Firstname Lastname</strong></p>
+          <a href="#" class="govuk-body-s govuk-link govuk-link--no-visited-state govuk-!-margin-bottom-0"> View</a>
+        </div>
+
+        <div class="po-card">
+          <p class="govuk-body-s govuk-!-margin-bottom-0"><strong>Firstname Lastname</strong></p>
+          <a href="#" class="govuk-body-s govuk-link govuk-link--no-visited-state govuk-!-margin-bottom-0"> View</a>
+        </div>
+
+         <div class="po-card">
+          <p class="govuk-body-s govuk-!-margin-bottom-0"><strong>Firstname Lastname</strong></p>
+          <a href="#" class="govuk-body-s govuk-link govuk-link--no-visited-state govuk-!-margin-bottom-0"> View</a>
+        </div>
+
+        <div class="po-card">
+          <p class="govuk-body-s govuk-!-margin-bottom-0"><strong>Firstname Lastname</strong></p>
+          <a href="#" class="govuk-body-s govuk-link govuk-link--no-visited-state govuk-!-margin-bottom-0"> View</a>
+        </div>
+
+        <div class="po-card">
+          <p class="govuk-body-s govuk-!-margin-bottom-0"><strong>Firstname Lastname</strong></p>
+          <a href="#" class="govuk-body-s govuk-link govuk-link--no-visited-state govuk-!-margin-bottom-0"> View</a>
+        </div>
+
+         <div class="po-card">
+          <p class="govuk-body-s govuk-!-margin-bottom-0"><strong>Firstname Lastname</strong></p>
+          <a href="#" class="govuk-body-s govuk-link govuk-link--no-visited-state govuk-!-margin-bottom-0"> View</a>
+        </div>
+
+        <div class="po-card">
+            <p class="govuk-body-s govuk-!-margin-bottom-0"><strong>Firstname Lastname</strong></p>
+            <a href="#" class="govuk-body-s govuk-link govuk-link--no-visited-state govuk-!-margin-bottom-0"> View</a>
+
+        </div>
+
+        <div class="po-card">
+          <p class="govuk-body-s govuk-!-margin-bottom-0"><strong>Firstname Lastname</strong></p>
+          <a href="#" class="govuk-body-s govuk-link govuk-link--no-visited-state govuk-!-margin-bottom-0"> View</a>
+        </div>
+
+        <div class="po-card">
+          <p class="govuk-body-s govuk-!-margin-bottom-0"><strong>Firstname Lastname</strong></p>
+          <a href="#" class="govuk-body-s govuk-link govuk-link--no-visited-state govuk-!-margin-bottom-0"> View</a>
+        </div>
+
+        <div class="po-card">
+          <p class="govuk-body-s govuk-!-margin-bottom-0"><strong>Firstname Lastname</strong></p>
+          <a href="#" class="govuk-body-s govuk-link govuk-link--no-visited-state govuk-!-margin-bottom-0"> View</a>
+        </div>
+
+        <div class="po-card">
+          <p class="govuk-body-s govuk-!-margin-bottom-0"><strong>Firstname Lastname</strong></p>
+          <a href="#" class="govuk-body-s govuk-link govuk-link--no-visited-state govuk-!-margin-bottom-0"> View</a>
+        </div>
+
+        <div class="po-card">
+          <p class="govuk-body-s govuk-!-margin-bottom-0"><strong>Firstname Lastname</strong></p>
+          <a href="#" class="govuk-body-s govuk-link govuk-link--no-visited-state govuk-!-margin-bottom-0"> View</a>
+        </div>
+
+        <div class="po-card">
+          <p class="govuk-body-s govuk-!-margin-bottom-0"><strong>Firstname Lastname</strong></p>
+          <a href="#" class="govuk-body-s govuk-link govuk-link--no-visited-state govuk-!-margin-bottom-0"> View</a>
+        </div>
+
+        <div class="po-card">
+          <p class="govuk-body-s govuk-!-margin-bottom-0"><strong>Firstname Lastname</strong></p>
+          <a href="#" class="govuk-body-s govuk-link govuk-link--no-visited-state govuk-!-margin-bottom-0"> View</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="list-grid">
+
+    <div class="allocate-list-header">
+      <h2 class="govuk-heading-m govuk-label-wrapper" id="accounts-title">Lists for 30 November 2026</h2>
+      <button type="submit" class="govuk-button govuk-!-margin-bottom-0" data-module="govuk-button">Add list</button>
+    </div>
+
+
+    <!-- List 1-->
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h3 class="govuk-summary-card__title">
+          <a href="list-page-1" class="govuk-link govuk-link--no-visited-state">List 1</a>
+        </h3>
+        <ul class="govuk-summary-card__actions">
+          <li class="govuk-summary-card__action">
+            <div class="allocated-name">
+              <p class="govuk-body govuk-!-margin-bottom-0"><strong>Joe Bloggs</strong> (Manchester POU) </p>
+              <strong class="govuk-tag govuk-tag--purple govuk-!-margin-left-2">Notified</strong>
+            </div>
+          </li>
+          <li class="govuk-summary-card__action">
+            <div class="moj-button-menu" data-module="moj-button-menu" data-button-text="Actions" data-button-classes="govuk-button--secondary" data-align-menu="right">
+              <a href="3-list-1-notified/collapse" role="button" draggable="false" class="govuk-button moj-button-menu__item govuk-button--secondary" data-module="govuk-button">
+                Collapse list
+              </a>
+              <a href="1-allocate.html" role="button" draggable="false" class="govuk-button moj-button-menu__item govuk-button--secondary" data-module="govuk-button">
+                Remove allocation
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="govuk-summary-card__content">
+        <ul class="card-group">
+          <!--hearing card-->
+          <li class="card-group__item">
+            <div class="card-group__item">
+              <div class="hearing-card">
+                <div class="hearing-card-header">
+                  <p class="govuk-body card__heading govuk-body-s"><a class="govuk-link card__link govuk-link--no-visited-state" href="hearing-page-1"><strong>PA/55142/2026</strong></a></p>
+                  <p class="govuk-body-s">Substantive</p>
+                </div>
+                <div class="hearing-card-body">
+                  <p class="govuk-body card__description govuk-body-s">Firstname Lastname</p>
+                  <p><strong class="govuk-tag tag-small govuk-tag--red">2 alerts</strong></p>
+                </div>
+                <div class="hearing-card-bottom">
+                  <p class="govuk-body card__description 	govuk-body-s">Nationality</p>
+                  <p><strong class="govuk-tag tag-small govuk-tag--grey">In person</strong></p>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!--hearing card-->
+          <li class="card-group__item">
+            <div class="card-group__item">
+              <div class="hearing-card">
+                <div class="hearing-card-header">
+                  <p class="govuk-body card__heading govuk-body-s"><a class="govuk-link card__link govuk-link--no-visited-state" href="hearing-page-2"><strong>PA/22773/2025</strong></a></p>
+                  <p class="govuk-body-s">Substantive</p>
+                </div>
+                <div class="hearing-card-body">
+                  <p class="govuk-body card__description govuk-body-s">Firstname Lastname</p>
+                  <p><strong class="govuk-tag tag-small govuk-tag--red">1 alert</strong></p>
+                </div>
+                <div class="hearing-card-bottom">
+                  <p class="govuk-body card__description 	govuk-body-s">Nationality</p>
+                  <p><strong class="govuk-tag tag-small govuk-tag--grey">In person</strong></p>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!--hearing card-->
+          <li class="card-group__item">
+            <div class="card-group__item">
+              <div class="hearing-card">
+                <div class="hearing-card-header">
+                  <p class="govuk-body card__heading govuk-body-s"><a class="govuk-link card__link govuk-link--no-visited-state" href="hearing-page-3"><strong>PA/82717/2026</strong></a></p>
+                  <p class="govuk-body-s">Substantive</p>
+                </div>
+                <div class="hearing-card-body">
+                  <p class="govuk-body card__description govuk-body-s">Firstname Lastname</p>
+                  <p><strong class="govuk-tag tag-small govuk-tag--red">2 alerts</strong></p>
+                </div>
+                <div class="hearing-card-bottom">
+                  <p class="govuk-body card__description 	govuk-body-s">Nationality</p>
+                  <p><strong class="govuk-tag tag-small govuk-tag--grey">In person</strong></p>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
+      <!-- List 2-->
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h3 class="govuk-summary-card__title">
+          <a href="list-page-2" class="govuk-link govuk-link--no-visited-state">List 2</a>
+        </h3>
+        <ul class="govuk-summary-card__actions">
+          <li class="govuk-summary-card__action">
+            <div class="allocate-box">
+              <p class="govuk-body govuk-!-margin-bottom-0">Allocate PO</p>
+            </div>
+          </li>
+          <li class="govuk-summary-card__action">
+            <div class="moj-button-menu" data-module="moj-button-menu" data-button-text="Actions" data-button-classes="govuk-button--secondary" data-align-menu="right">
+              <a href="3-list-1-notified-list-2-actions/confirm" role="button" draggable="false" class="govuk-button moj-button-menu__item govuk-button--secondary" data-module="govuk-button">
+                Confirm list
+              </a>
+              <a href="3-list-1-notified-list-2-actions/collapse" role="button" draggable="false" class="govuk-button moj-button-menu__item govuk-button--secondary" data-module="govuk-button">
+                Collapse list
+              </a>
+              <a href="3-list-1-notified-list-2-actions/edit-name" role="button" draggable="false" class="govuk-button moj-button-menu__item govuk-button--secondary" data-module="govuk-button">
+                Edit list name
+              </a>
+              <a href="3-list-1-notified-list-2-actions/outside-pou.html" role="button" draggable="false" class="govuk-button moj-button-menu__item govuk-button--secondary" data-module="govuk-button">
+                Allocate outside your POU
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="govuk-summary-card__content">
+        <ul class="card-group">
+          <!--hearing card-->
+          <li class="card-group__item">
+            <div class="card-group__item">
+              <div class="hearing-card">
+                <div class="hearing-card-header">
+                  <p class="govuk-body card__heading govuk-body-s"><a class="govuk-link card__link govuk-link--no-visited-state" href="hearing-page-4"><strong>PA/76392/2026</strong></a></p>
+                  <p class="govuk-body-s">CMR</p>
+                </div>
+                <div class="hearing-card-body">
+                  <p class="govuk-body card__description govuk-body-s">Firstname Lastname</p>
+                  <!--<p><strong class="govuk-tag tag-small govuk-tag--red">2 alerts</strong></p>-->
+                </div>
+                <div class="hearing-card-bottom">
+                  <p class="govuk-body card__description 	govuk-body-s">Nationality</p>
+                  <p><strong class="govuk-tag tag-small govuk-tag--grey">Hybrid</strong></p>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!--hearing card-->
+          <li class="card-group__item">
+            <div class="card-group__item">
+              <div class="hearing-card">
+                <div class="hearing-card-header">
+                  <p class="govuk-body card__heading govuk-body-s"><a class="govuk-link card__link govuk-link--no-visited-state" href="hearing-page-5"><strong>PA/29987/2026</strong></a></p>
+                  <p class="govuk-body-s">CMR</p>
+                </div>
+                <div class="hearing-card-body">
+                  <p class="govuk-body card__description govuk-body-s">Firstname Lastname</p>
+                  <p><strong class="govuk-tag tag-small govuk-tag--red">3 alerts</strong></p>
+                </div>
+                <div class="hearing-card-bottom">
+                  <p class="govuk-body card__description 	govuk-body-s">Nationality</p>
+                  <p><strong class="govuk-tag tag-small govuk-tag--grey">Hybrid</strong></p>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!--hearing card-->
+          <li class="card-group__item">
+            <div class="card-group__item">
+              <div class="hearing-card">
+                <div class="hearing-card-header">
+                  <p class="govuk-body card__heading govuk-body-s"><a class="govuk-link card__link govuk-link--no-visited-state" href="hearing-page-6"><strong>PA/43937/2026</strong></a></p>
+                  <p class="govuk-body-s">CMR</p>
+                </div>
+                <div class="hearing-card-body">
+                  <p class="govuk-body card__description govuk-body-s">Firstname Lastname</p>
+                  <p><strong class="govuk-tag tag-small govuk-tag--red">2 alerts</strong></p>
+                </div>
+                <div class="hearing-card-bottom">
+                  <p class="govuk-body card__description 	govuk-body-s">Nationality</p>
+                  <p><strong class="govuk-tag tag-small govuk-tag--grey">In person</strong></p>
+                </div>
+              </div>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+
+
+
+  
+   
+
+  </div>
+</div>
+
+
+
+
+
+
+{% endblock %}
