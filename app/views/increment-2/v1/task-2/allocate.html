@@ -1,0 +1,357 @@
+
+{% extends "layouts/main-header-nav" %}
+
+{% block content %}
+
+  <div class="allocate-row">
+    <div>
+      <span class="govuk-caption-xl">Birmingham</span>
+      <h1 class="govuk-heading-xl">Allocate lists for 30 November</h1>
+    </div>
+    <!--<div class="allocate-controls">
+      <div class="moj-datepicker" data-module="moj-date-picker">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="date">
+            Date
+          </label>
+          <input class="govuk-input moj-js-datepicker-input " id="date" name="date" type="text" value="30/11/2026" aria-describedby="date-hint" autocomplete="off">
+        </div>
+      </div>
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="sort">
+          Court
+        </label>
+        <select class="govuk-select" id="sort" name="sort">
+          <option value="published">Court 1</option>
+          <option value="updated" selected>Court 2</option>
+          <option value="views">Court 3</option>
+          <option value="comments">Court 4</option>
+        </select>
+      </div>
+    </div>-->
+  </div>
+
+  <div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-quarter">
+    <div class="govuk-tabs" data-module="govuk-tabs">
+
+
+      <!-- hearings tab -->
+      <div class="hearing-panel" id="hearings">
+
+        <div class="govuk-form-group">
+          <!--<label class="govuk-label" for="selectList">
+            Select list
+          </label>-->
+          <select class="govuk-select" id="selectList" name="selectList">
+            <option value="list1" selected>List 1</option>
+            <option value="list2">List 2</option>
+            <option value="list3">List 3</option>
+          </select>
+        </div>
+  
+
+        <div class="hearing-header">
+          <h2 class="govuk-heading-m govuk-label-wrapper" id="list header"><a class="govuk-link card__link govuk-link--no-visited-state" href="#">List 1</a></h2>
+        </div>
+
+        <div class="hearing-description">
+          <h3 class="govuk-heading-s govuk-!-margin-bottom-1"><strong>Notes</strong></h3>
+          <p class="govuk-body-s govuk-!-margin-bottom-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <h3 class="govuk-heading-s govuk-!-margin-bottom-2"><strong>Hearings</strong></h3>
+        </div>
+
+        <div class="hearing-card-allocate">
+          <div class="hearing-card-header-allocate">
+            <p class="govuk-body card__heading govuk-body-s"><a class="govuk-link card__link govuk-link--no-visited-state" href="#"><strong>PA/22827/2026</strong></a></p>
+            <p class="govuk-body-s">Substantive</p>
+          </div>
+          <div class="hearing-card-body-allocate">
+            <p class="govuk-body card__description govuk-body-s">Firstname Lastname</p>
+            <p><strong class="govuk-tag tag-small govuk-tag--red">2 alerts</strong></p>
+          </div>
+          <div class="hearing-card-description-allocate">
+            <p class="govuk-body card__description 	govuk-body-s">Nationality</p>
+            <p><strong class="govuk-tag tag-small govuk-tag--grey">In person</strong></p>
+          </div>
+          <div class="hearing-card-bottom-allocate">
+            <p class="govuk-body card__description govuk-body-s">Alerts: safeguarding, 24 week timescale</p>
+          </div>
+        </div>
+
+        <div class="hearing-card">
+          <div class="hearing-card-header">
+            <p class="govuk-body card__heading govuk-body-s"><a class="govuk-link card__link govuk-link--no-visited-state" href="#"><strong>PA/32321/2026</strong></a></p>
+            <p class="govuk-body-s">Substantive</p>
+          </div>
+          <div class="hearing-card-body">
+            <p class="govuk-body card__description govuk-body-s">Firstname Lastname</p>
+            <!--<p><strong class="govuk-tag tag-small govuk-tag--red">2 alerts</strong></p>-->
+          </div>
+          <div class="hearing-card-bottom">
+            <p class="govuk-body card__description 	govuk-body-s">Nationality</p>
+            <p><strong class="govuk-tag tag-small govuk-tag--grey">In person</strong></p>
+          </div>
+        </div>
+
+        <div class="hearing-card-allocate">
+          <div class="hearing-card-header-allocate">
+            <p class="govuk-body card__heading govuk-body-s"><a class="govuk-link card__link govuk-link--no-visited-state" href="#"><strong>PA/10202/2026</strong></a></p>
+            <p class="govuk-body-s">Substantive</p>
+          </div>
+          <div class="hearing-card-body-allocate">
+            <p class="govuk-body card__description govuk-body-s">Firstname Lastname</p>
+            <p><strong class="govuk-tag tag-small govuk-tag--red">2 alerts</strong></p>
+          </div>
+          <div class="hearing-card-description-allocate">
+            <p class="govuk-body card__description 	govuk-body-s">Nationality</p>
+            <p><strong class="govuk-tag tag-small govuk-tag--grey">In person</strong></p>
+          </div>
+          <div class="hearing-card-bottom-allocate">
+            <p class="govuk-body card__description govuk-body-s">Alerts: deportation risk, safeguarding</p>
+          </div>
+        </div>
+
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="govuk-grid-column-three-quarters">
+    <div class="govuk-tabs" data-module="govuk-tabs">
+      <ul class="govuk-tabs__list">
+        <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+          <a class="govuk-tabs__tab" href="#available-pos">
+            Available POs
+          </a>
+        </li>
+        <li class="govuk-tabs__list-item">
+          <a class="govuk-tabs__tab" href="#other">
+            Outside POU
+          </a>
+        </li>
+      </ul>
+
+      <!--allocate panel-->
+      
+      <div class="govuk-tabs__panel allocate-tabs-panel" id="available-pos">
+        <h2 class="govuk-heading-m">Allocate an available PO</h2>
+
+        <table class="govuk-table" data-module="moj-multi-select" data-id-prefix="cases-">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th class="govuk-table__header" scope="col" style="width: 5%;"></th>
+              <th class="govuk-table__header" scope="col" style="width: 20%;">Name</th>
+              <th class="govuk-table__header" scope="col" style="width: 35%;">Skillsets</th>
+              <th class="govuk-table__header" scope="col" style="width: 15%;">Attendance</th>
+              <th class="govuk-table__header" scope="col" style="width: 15%;">Single-sex hearings</th>
+              <th class="govuk-table__header" scope="col" style="width: 10%;">Other</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row govuk-table__row--selected">
+              <td class="govuk-table__cell">
+                <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+                  <input type="checkbox" class="govuk-checkboxes__input" id="case-sam-smith">
+                  <label class="govuk-label govuk-checkboxes__label" for="case-sam-smith">
+                    <span class="govuk-visually-hidden">Select Sam Smith</span>
+                  </label>
+                </div>
+              </td>
+              <td class="govuk-table__cell"><a href="#" class="govuk-link govuk-link--no-visited-state">Sam Smith</a></td>
+              <td class="govuk-table__cell">Asylum support, bails, deport case management review, deportation</td>
+              <td class="govuk-table__cell">In person, remote CVP</td>
+              <td class="govuk-table__cell">All-male</td>
+              <td class="govuk-table__cell">Mentor</td>
+            </tr>
+
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+                  <input type="checkbox" class="govuk-checkboxes__input" id="case-sam-smith">
+                  <label class="govuk-label govuk-checkboxes__label" for="case-sam-smith">
+                    <span class="govuk-visually-hidden">Select Sam Smith</span>
+                  </label>
+                </div>
+              </td>
+              <td class="govuk-table__cell"><a href="#" class="govuk-link govuk-link--no-visited-state">Jane Smith</a></td>
+              <td class="govuk-table__cell">Asylum support</td>
+              <td class="govuk-table__cell">Remote CVP</td>
+              <td class="govuk-table__cell">All-female</td>
+              <td class="govuk-table__cell"></td>
+            </tr>
+
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+                  <input type="checkbox" class="govuk-checkboxes__input" id="case-sam-smith">
+                  <label class="govuk-label govuk-checkboxes__label" for="case-sam-smith">
+                    <span class="govuk-visually-hidden">Select Sam Smith</span>
+                  </label>
+                </div>
+              </td>
+              <td class="govuk-table__cell"><a href="#" class="govuk-link govuk-link--no-visited-state">Tom Edwards</a><br><strong class="govuk-tag govuk-!-margin-top-2">Senior caseworker</strong></td>
+              <td class="govuk-table__cell">Article 1F, asylum support, bails, deport CMRs, deportation, deprivation, revocation, pragmatic reviews</td>
+              <td class="govuk-table__cell">In person, remote CVP</td>
+              <td class="govuk-table__cell">All-male</td>
+              <td class="govuk-table__cell"></td>
+            </tr>
+
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+                  <input type="checkbox" class="govuk-checkboxes__input" id="case-sam-smith">
+                  <label class="govuk-label govuk-checkboxes__label" for="case-sam-smith">
+                    <span class="govuk-visually-hidden">Select Sam Smith</span>
+                  </label>
+                </div>
+              </td>
+              <td class="govuk-table__cell"><a href="#" class="govuk-link govuk-link--no-visited-state">Sally Bloggs</a></td>
+              <td class="govuk-table__cell">Bails, deportation, pragmatic reviews</td>
+              <td class="govuk-table__cell">In person, remote CVP</td>
+              <td class="govuk-table__cell">All-female</td>
+              <td class="govuk-table__cell"></td>
+            </tr>
+
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+                  <input type="checkbox" class="govuk-checkboxes__input" id="case-sam-smith">
+                  <label class="govuk-label govuk-checkboxes__label" for="case-sam-smith">
+                    <span class="govuk-visually-hidden">Select Sam Smith</span>
+                  </label>
+                </div>
+              </td>
+              <td class="govuk-table__cell"><a href="#" class="govuk-link govuk-link--no-visited-state">John Edwards</a></td>
+              <td class="govuk-table__cell">Deprivation, revocation, pragmatic reviews</td>
+              <td class="govuk-table__cell">In person</td>
+              <td class="govuk-table__cell">None</td>
+              <td class="govuk-table__cell">Mentor</td>
+            </tr>
+
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+                  <input type="checkbox" class="govuk-checkboxes__input" id="case-sam-smith">
+                  <label class="govuk-label govuk-checkboxes__label" for="case-sam-smith">
+                    <span class="govuk-visually-hidden">Select Sam Smith</span>
+                  </label>
+                </div>
+              </td>
+              <td class="govuk-table__cell"><a href="#" class="govuk-link govuk-link--no-visited-state">Jane Doe</a></td>
+              <td class="govuk-table__cell"></td>
+              <td class="govuk-table__cell">In person, remote CVP</td>
+              <td class="govuk-table__cell">All-female</td>
+              <td class="govuk-table__cell">Mentee</td>
+            </tr>
+
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+                  <input type="checkbox" class="govuk-checkboxes__input" id="case-sam-smith">
+                  <label class="govuk-label govuk-checkboxes__label" for="case-sam-smith">
+                    <span class="govuk-visually-hidden">Select Sam Smith</span>
+                  </label>
+                </div>
+              </td>
+              <td class="govuk-table__cell"><a href="#" class="govuk-link govuk-link--no-visited-state">Jack Smith</a></td>
+              <td class="govuk-table__cell">Bails, deport case management review</td>
+              <td class="govuk-table__cell">In person, remote CVP</td>
+              <td class="govuk-table__cell">All-male</td>
+              <td class="govuk-table__cell"></td>
+            </tr>
+
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+                  <input type="checkbox" class="govuk-checkboxes__input" id="case-sam-smith">
+                  <label class="govuk-label govuk-checkboxes__label" for="case-sam-smith">
+                    <span class="govuk-visually-hidden">Select Sam Smith</span>
+                  </label>
+                </div>
+              </td>
+              <td class="govuk-table__cell"><a href="#" class="govuk-link govuk-link--no-visited-state">Sarah Smith</a></td>
+              <td class="govuk-table__cell">Bails</td>
+              <td class="govuk-table__cell">In person, remote CVP</td>
+              <td class="govuk-table__cell">All-female</td>
+              <td class="govuk-table__cell"></td>
+            </tr>
+
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+                  <input type="checkbox" class="govuk-checkboxes__input" id="case-sam-smith">
+                  <label class="govuk-label govuk-checkboxes__label" for="case-sam-smith">
+                    <span class="govuk-visually-hidden">Select Sam Smith</span>
+                  </label>
+                </div>
+              </td>
+              <td class="govuk-table__cell"><a href="#" class="govuk-link govuk-link--no-visited-state">Andrew Edwards</a></td>
+              <td class="govuk-table__cell">Bails, deport case management review, revocation, pragmatic reviews</td>
+              <td class="govuk-table__cell">Remote CVP</td>
+              <td class="govuk-table__cell">All-male</td>
+              <td class="govuk-table__cell"></td>
+            </tr>
+
+
+
+  </tbody>
+</table>
+
+
+        
+      </div>
+
+      <!--other panel-->
+      <div class="govuk-tabs__panel govuk-tabs__panel--hidden allocate-tabs-panel" id="other">
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h2 class="govuk-fieldset__heading">
+                Allocate somebody outside your POU
+              </h2>
+            </legend>
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
+                <label class="govuk-label govuk-radios__label" for="contact">
+                  Search for someone outside your POU
+                </label>
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
+                {% include "includes/person-picker" %}
+              </div>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2">
+              <label class="govuk-label govuk-radios__label" for="contact-2">
+                Represented by an external barrister
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2">
+              <label class="govuk-label govuk-radios__label" for="contact-2">
+                Agreed to no Home Office representation
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+  </div>
+</div>
+
+
+
+
+
+
+{% endblock %}
