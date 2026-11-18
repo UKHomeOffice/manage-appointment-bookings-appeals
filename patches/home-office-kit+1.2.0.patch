@@ -1,0 +1,40 @@
+diff --git a/node_modules/home-office-kit/routes/all.js b/node_modules/home-office-kit/routes/all.js
+index 78c718d..756a64b 100644
+--- a/node_modules/home-office-kit/routes/all.js
++++ b/node_modules/home-office-kit/routes/all.js
+@@ -11,7 +11,7 @@ const config = require('../lib/config')
+ // This is not logged in Heroku or anywhere where the prototype is published.
+ // To add this functionality, set logData to True in config.json
+ 
+-router.all('*', function (req, res, next) {
++router.all('/*path', function (req, res, next) {
+   prototypeConfig = config.getHomeOfficeKitConfig().prototypeConfig;
+   homeOfficeKitConfig = config.getHomeOfficeKitConfig().homeOfficeKitConfig;
+ 
+@@ -31,7 +31,7 @@ router.all('*', function (req, res, next) {
+ })
+ 
+ // Finds the current page URL and stores so can be used as the default next page route
+-router.all('*', function (req, res, next){
++router.all('/*path', function (req, res, next){
+   if (!res.locals.homeOfficeKit) {
+     res.locals.homeOfficeKit = {}
+   }
+@@ -42,7 +42,7 @@ router.all('*', function (req, res, next){
+ 
+ // Stores the date to be used on HTML pages.
+ // This code is run for all requests.
+-router.get('*', function (req, res, next) {
++router.get('/*path', function (req, res, next) {
+ 
+   // Examples of date
+   //
+@@ -98,7 +98,7 @@ router.get('*', function (req, res, next) {
+   })
+ 
+ // Radio button redirect
+-router.get('*', function(req, res, next) {
++router.get('/*path', function(req, res, next) {
+   // This function redirects if any part of the data contains '~home-office-kit-redirect-to~'
+ 
+   // This is usually used for radio buttons, by setting the value to "yes~home-office-kit-redirect-to~/page/to/redirect/to"
