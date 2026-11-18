@@ -3,9 +3,11 @@ For guidance on how to use layouts see:
 https://prototype-kit.service.gov.uk/how-to-use-layouts/
 #}
 
+{% extends "home-office-kit-layout.html" %}
 
-
-
-
-
-
+{% block homeOfficeKit_style %}
+html,
+body {
+    background: #f5f5f5!important;
+}
+{% endblock %}
