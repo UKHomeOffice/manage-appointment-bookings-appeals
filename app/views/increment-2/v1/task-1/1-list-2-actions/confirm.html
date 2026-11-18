@@ -1,0 +1,55 @@
+
+{% extends "layouts/main" %}
+
+{% block content %}
+
+<a href="../1-allocate" class="govuk-back-link">Back</a>
+
+  <form class="form" action="../2-allocate-list-2-allocated" method="post">
+
+
+    <div class="govuk-form-group">
+
+      <h1 class="govuk-heading-l">
+        Confirm list 1
+      </h1>
+
+      <p class="govuk-body">Your list does not have a PO allocated.
+
+
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h2 class="govuk-fieldset__heading">
+        Why?
+      </h2>
+    </legend>
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="whereDoYouLive" name="whereDoYouLive" type="radio" value="england">
+        <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
+          Agreed to go ahead with no Home Office representation
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio" value="scotland">
+        <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
+          Represented by an external barrister
+        </label>
+      </div>
+    </div>
+  </fieldset>
+
+  <br>
+  <br>
+
+  <div class="govuk-button-group">
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+      Confirm
+    </button>
+    <a class="govuk-link" href="../1-allocte">Cancel</a>
+</div>
+
+</div>
+
+
+{% endblock %}
